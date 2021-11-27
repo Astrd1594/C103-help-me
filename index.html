@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Recognition</title>
+        <script src="main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    </head>
+    <body class="container">
+        <center>
+            <h1>Object Recognition</h1>
+            <!--LIST OF WHO IS RECOGNIZES-->
+            <div class="modal-fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <label><b class="text-danger">How to use: </b>This website recognizes the following people.
+                             Ask someone to stand in front of webcam and the website will recognise who it is!</label>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li><p>William</p></li>
+                                <li><p>Popcorn</p></li>
+                                <li><p>Astrid</p></li>
+                                <li><p>Mum</p></li>
+                                <li><p>Dad</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--CAMERA VIEW AND SNAP BUTTON-->
+            <div class="modal-fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Camera view</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div id="cameraview"></div>
+                            <br>
+                            <button onclick="takepic()" id="takepicbutton" class="btn btn-primary">Take Picture</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--SNAPSHOT AND IDENTIFY BUTTON-->
+            <div class="modal-fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Your picture</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div id="pic"></div>
+                            <br>
+                            <button onclick="identifypic()" id="identifypicbutton" class="btn btn-primary">Identify Object</button>
+                            <br><br>
+                            <label>Object:  <span id="objectname"></span></label>
+                            <br><br>
+                            <label>Accuracy:  <span id="accuracy"></span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

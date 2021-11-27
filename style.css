@@ -1,0 +1,9 @@
+#camview, #pic{
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: rgb(243, 243, 243);
+    width: 350px;
+    height: 300px;
+}
